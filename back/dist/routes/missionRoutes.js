@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const missionControllers_1 = require("../controllers/missionControllers");
+const router = (0, express_1.Router)();
+router.post('/mission', missionControllers_1.createMission);
+router.get('/missions', missionControllers_1.getMissions);
+router.post('/executeMission/:id', missionControllers_1.executeMission);
+router.put('/updateMissionStatus/:id', missionControllers_1.updateMissionStatus);
+exports.default = router;
